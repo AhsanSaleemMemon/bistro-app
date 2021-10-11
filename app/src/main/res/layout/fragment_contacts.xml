@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout_1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/man"
+            android:id="@+id/photo_id"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            />
+        <TextView
+            android:id="@+id/name_id"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No unread messages"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_alignParentRight="true"
+
+            android:text="Edit"
+            android:textColor="#0026F8"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout_2"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/layout_1"
+        android:orientation="horizontal">
+
+
+
+        <ImageButton
+            android:id="@+id/addcontact_id"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/layout_1"
+            android:src="@drawable/addcontact"
+            android:layout_marginTop="20dp"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="New Contact"
+            android:textColor="@color/white"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_2"
+        android:id="@+id/layout_3"
+
+        >
+
+    <ImageButton
+        android:id="@+id/addgroup_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/addcontact_id"
+        android:src="@drawable/addgroup"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="New Group"
+        android:textColor="@color/white"
+         />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_3"
+        android:id="@+id/layout_4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONTACTED FREQUENTLY"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/layout_4"
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>

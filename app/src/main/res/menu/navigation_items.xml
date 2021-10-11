@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/call_nav"
+        android:icon="@drawable/call"
+        android:title="Call"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/cam_nav"
+        android:icon="@drawable/camera"
+        android:title="Camera"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/chat_nav"
+        android:icon="@drawable/chat"
+        android:title="Chat"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/group_nav"
+        android:icon="@drawable/group"
+        android:title="Group"
+        android:enabled="true"
+        />
+
+</menu>
