@@ -11,6 +11,9 @@ public class SignUpActivity extends AppCompatActivity {
 
     TextView login_page;
 
+    String[] emails = {"ahsanmemon288@gmail.com", "aqeelejaz238@gmail.com", "anonymous123@gmail.com"};
+    String[] passwords = {"user123", "user456", "user678"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
