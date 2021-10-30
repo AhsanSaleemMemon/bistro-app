@@ -14,8 +14,8 @@ public class LoginActivity extends AppCompatActivity {
     TextView sign_up;
     Button log_in_btn;
 
-    EditText email_input;
-    EditText password_input;
+    EditText email;
+    EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class LoginActivity extends AppCompatActivity {
         log_in_btn=findViewById(R.id.login_btn);
         sign_up = findViewById(R.id.sign_up_page);
 
-        email_input = findViewById(R.id.email_input);
-        password_input = findViewById(R.id.pass_input);
+        email = findViewById(R.id.email_input);
+        password = findViewById(R.id.pass_input);
 
         String[] emails = {"ahsanmemon288@gmail.com", "aqeelejaz238@gmail.com", "anonymous123@gmail.com"};
         String[] passwords = {"user123", "user456", "user678"};
@@ -41,8 +41,11 @@ public class LoginActivity extends AppCompatActivity {
         log_in_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
+                if (emails[0].equalsIgnoreCase("ahsanmemon288@gmail.com") && passwords[0].equals("user123") && passwords[0].equals("user123")) {
+
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -50,5 +53,15 @@ public class LoginActivity extends AppCompatActivity {
 
 //    private static boolean isEmpty()
 
+
+    boolean areAllFielsFilled(){
+        if (!email.getText().toString().isEmpty() && !password.getText().toString().isEmpty()){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
 
 }

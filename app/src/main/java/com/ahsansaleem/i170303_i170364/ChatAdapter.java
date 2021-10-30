@@ -1,6 +1,7 @@
 package com.ahsansaleem.i170303_i170364;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,11 +37,13 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.myViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ChatAdapter.myViewHolder holder, int position) {
+
         holder.messengerPhoto.setImageResource(list.get(position).getMessengerPhoto());
         holder.messengerName.setText(list.get(position).getMessengerName());
 
         if(list.get(position).isMessengerOnline()){ holder.onlineStatus.setVisibility(View.VISIBLE); } // if the messenger is online, online status icon will be visible,
         else {holder.onlineStatus.setVisibility(View.INVISIBLE);}                                       // otherwise invisible
+
 
 
         holder.timeStamp.setText(list.get(position).getTimestamp());
@@ -59,6 +62,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.myViewHolder> 
                 holder.lastMessage.setText("You sent a emoji/sticker");
             }
         }
+
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(cxt, ChatScreenActivity.class);
+                cxt.startActivity(intent);
+            }
+        });
     }
 
     @Override

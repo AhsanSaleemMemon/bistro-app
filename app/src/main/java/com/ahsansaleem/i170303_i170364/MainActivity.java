@@ -1,12 +1,14 @@
 package com.ahsansaleem.i170303_i170364;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
 //                return true;
 //            }
 //        });
+
+
 
         loadFragment(new CallHistoryFragment());
 

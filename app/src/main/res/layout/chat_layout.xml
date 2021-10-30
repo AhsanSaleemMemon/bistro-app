@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout android:layout_width="match_parent"
-    android:id="@+id/call_history_user_layout"
+    android:id="@+id/chat_user_layout"
     android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#0D0C0C">
-
-
-
 
         <FrameLayout
             android:id="@+id/image_frame"
